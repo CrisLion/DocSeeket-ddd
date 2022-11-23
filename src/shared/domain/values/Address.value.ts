@@ -1,28 +1,28 @@
 export class Address {
-  private city: string;
-  private state: string;
   private country: string;
+  private state: string;
+  private city: string;
   private street: string;
   private zipCode: string;
 
-  private constructor(city: string, state: string, country: string, street: string, zipCode: string) {
-    this.city=city;
-    this.state=state;
+  private constructor(country: string, state: string, city: string, street: string, zipCode: string) {
     this.country=country;
+    this.state=state;
+    this.city=city;
     this.street=street;
     this.zipCode=zipCode;
   }
 
-  public getCity(): string {
-    return  this.city;
+  public getCountry(): string {
+    return this.country;
   }
 
   public getState(): string {
     return this.state;
   }
 
-  public getCountry(): string {
-    return this.country;
+  public getCity(): string {
+    return  this.city;
   }
 
   public getStreet(): string {
@@ -33,7 +33,7 @@ export class Address {
     return this.zipCode;
   }
 
-  public static create(city: string, state: string, country: string, street: string, zipCode: string): Address {
-    return new Address(city, state, country, street, zipCode);
+  public static create(country: string, state: string, city: string, street: string, zipCode: string): Address {
+    return new Address(country, state, city, street, zipCode);
   }
 }

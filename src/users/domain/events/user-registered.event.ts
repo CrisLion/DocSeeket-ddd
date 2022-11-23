@@ -5,7 +5,7 @@ export class UserRegistered {
     public readonly lastName: string,
     public readonly password: string,
     public readonly email: string,
-    public readonly codeByCountry: string,
+    public readonly countryCodePhoneNumber: string,
     public readonly phoneNumber: string,
     public readonly city: string,
     public readonly state: string,

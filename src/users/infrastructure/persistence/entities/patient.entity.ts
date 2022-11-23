@@ -3,6 +3,6 @@ import { ChildEntity } from "typeorm";
 import { UserEntity } from "./user.patient";
 
 @ChildEntity(Role.PATIENT)
-export class PatientEntitt extends UserEntity {
+export class PatientEntity extends UserEntity {
   
 }

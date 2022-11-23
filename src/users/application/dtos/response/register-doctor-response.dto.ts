@@ -1,5 +1,6 @@
-export class RegisterDoctorRequest {
+export class RegisterDoctorResponse {
   constructor(
+    public readonly id: string,
     public readonly name: string,
     public readonly lastName: string,
     public readonly password: string,
@@ -11,6 +12,6 @@ export class RegisterDoctorRequest {
     public readonly city: string,
     public readonly street: string,
     public readonly zipCode: string,
-    public readonly rating: number
+    public readonly rating: number,
   ) {}
 }

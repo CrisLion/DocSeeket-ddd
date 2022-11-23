@@ -7,11 +7,16 @@ import { Rating } from "../aggregates/users/rating.value";
 import { Doctor } from "../aggregates/users/doctor.entity";
 import { DoctorId } from "../aggregates/users/doctor-id.value";
 
-export class PatientFactory {
-  public static createPatient(id: DoctorId, name: Fullname, password: Password, email: Email,
+export class DoctorFactory {
+  public static createDoctorWithId(id: DoctorId, name: Fullname, password: Password, email: Email,
     phone: PhoneNumber, address: Address, rating: Rating) {
       let doctor: Doctor = new Doctor(name, password, email, phone, address, rating);
       doctor.changeId(id);
       return doctor;
   }
+
+  public static createDoctorWithoutId(name: Fullname, password: Password, email: Email,
+    phone: PhoneNumber, address: Address, rating: Rating) {
+      return new Doctor(name, password, email, phone, address, rating);
+    }
 }

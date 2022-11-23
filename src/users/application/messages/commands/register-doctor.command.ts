@@ -1,4 +1,4 @@
-export class RegisterDoctorRequest {
+export class RegisterDoctor {
   constructor(
     public readonly name: string,
     public readonly lastName: string,
@@ -11,6 +11,6 @@ export class RegisterDoctorRequest {
     public readonly city: string,
     public readonly street: string,
     public readonly zipCode: string,
-    public readonly rating: number
+    public readonly rating: number,
   ) {}
 }

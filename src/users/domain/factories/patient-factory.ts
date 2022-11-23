@@ -7,10 +7,15 @@ import { PatientId } from "../aggregates/users/patient-id.value";
 import { Address } from "src/shared/domain/values/Address.value";
 
 export class PatientFactory {
-  public static createPatient(id: PatientId, name: Fullname, password: Password, email: Email,
+  public static createPatientWithId(id: PatientId, name: Fullname, password: Password, email: Email,
     phone: PhoneNumber, address: Address) {
       let patient: Patient = new Patient(name, password, email, phone, address);
       patient.changeId(id);
       return patient;
   }
+
+  public static createPatientWithoutId(name: Fullname, password: Password, email: Email,
+    phone: PhoneNumber, address: Address) {
+      return new Patient(name, password, email, phone, address);
+    }
 }
