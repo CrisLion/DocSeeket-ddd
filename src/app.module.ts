@@ -3,6 +3,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { UsersModule } from './users/users.module';
+import { NotificationsModule } from './notifications/notifications.module';
 
 @Module({
   imports: [
@@ -22,7 +23,8 @@ import { UsersModule } from './users/users.module';
       ],
       migrationsTableName: "migrations"
     }),
-    UsersModule
+    UsersModule,
+    NotificationsModule
   ],
   controllers: [AppController],
   providers: [AppService],

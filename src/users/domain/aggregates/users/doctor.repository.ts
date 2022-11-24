@@ -1,10 +1,10 @@
 import { Doctor } from "./doctor.entity"
 
-export const PATIENT_REPOSITORY = "PatientRepository"
+export const DOCTOR_REPOSITORY = "DoctorRepository"
 
-export interface PatientRepository {
-  create(patient: Doctor): Promise<Doctor>;
-  update(patient: Doctor): Promise<Doctor>;
+export interface DoctorRepository {
+  create(doctor: Doctor): Promise<Doctor>;
+  update(doctor: Doctor): Promise<Doctor>;
   delete(id: string): Promise<boolean>;
   getById(id: string): Promise<Doctor>;
 }
